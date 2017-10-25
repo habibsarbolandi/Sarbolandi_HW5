@@ -17,6 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let tabVC = self.window?.rootViewController as! UITabBarController
+        let nav1VC = tabVC.viewControllers?.first as! UINavigationController
+        let medVC = nav1VC.viewControllers[0] as! medTVC
+        
+        medVC.meds.append(Med(name: "Ibuprofen", dosage: "250", daily: "2"))
+        
         return true
     }
 

@@ -69,7 +69,7 @@ class medTVC: UITableViewController {
         // Configure the cell...
         let currentMed = meds[indexPath.row]
         cell.textLabel?.text = currentMed.name
-        cell.detailTextLabel?.text = "Dosage: \(currentMed.dosage)   Taken: \(currentMed.daily)x times per day"
+        cell.detailTextLabel?.text = "Dosage: \(currentMed.dosage)   Taken: \(currentMed.daily) times per day"
 
         return cell
     }
