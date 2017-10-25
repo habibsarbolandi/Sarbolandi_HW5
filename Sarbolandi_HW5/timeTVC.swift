@@ -1,22 +1,17 @@
 //
-//  medTVC.swift
+//  timeTVC.swift
 //  Sarbolandi_HW5
 //
-//  Created by Habib Sarbolandi on 10/24/17.
+//  Created by Habib Sarbolandi on 10/25/17.
 //  Copyright © 2017 Habib Sarbolandi. All rights reserved.
 //
 
 import UIKit
 
-protocol CellSelectedDelegate {
-    func read(med: Med)
-}
-
-class medTVC: UITableViewController {
-
-    var meds = [Med]()
-    let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addMed))
+class timeTVC: UITableViewController {
     
+    var medDictionary: [String:Array<Med>] = [:]
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,22 +19,9 @@ class medTVC: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        self.navigationItem.leftBarButtonItem = self.editButtonItem
-        self.navigationItem.rightBarButtonItem = self.addButton
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
-    @objc func addMed() {
-        //let alertName = UIAlertController(title: "Medication", message: "Type name of med", preferredStyle: .alert)
-        //let confirmName = UIAlertAction(title: "Confirm", style: UIAlertActionStyle.default, handler: ({
-          //  (_) in
-            
-        //}))
-        print("adding a med")
-       // let alertDosage = UIAlertController(title: "Dosage", message: "Type the dosage of med (ie 125 or 275)", preferredStyle: .alert)
-       // let alertDaily = UIAlertController(title: "Daily", message: "Number of times taken per day (ie 1 or 5)", preferredStyle: .alert)
-        
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -54,27 +36,19 @@ class medTVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return meds.count
+        return 2
     }
 
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //TODO: react to user selecting row
-        //I want the detail view controller to update based on the row that I selected
-        
-        let selectedMed = meds[indexPath.row]
-        
-    }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "medCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "timeCell", for: indexPath)
 
-        // Configure the cell...
-        let currentMed = meds[indexPath.row]
-        cell.textLabel?.text = currentMed.name
-        cell.detailTextLabel?.text = "Dosage: \(currentMed.dosage)mg   Taken: \(currentMed.daily) times per day"
+        let keywords = Array(medDictionary.keys)
+        cell.textLabel?.text = keywords[indexPath.row]
 
         return cell
     }
+
 
     /*
     // Override to support conditional editing of the table view.
@@ -84,17 +58,17 @@ class medTVC: UITableViewController {
     }
     */
 
+    /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            print("deleting med")
-            meds.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
+    */
 
     /*
     // Override to support rearranging the table view.

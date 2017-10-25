@@ -20,8 +20,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tabVC = self.window?.rootViewController as! UITabBarController
         let nav1VC = tabVC.viewControllers?.first as! UINavigationController
         let medVC = nav1VC.viewControllers[0] as! medTVC
+        let nav2VC = tabVC.viewControllers![1] as! UINavigationController
+        let weekVC = nav2VC.viewControllers[0] as! weekTVC
         
         medVC.meds.append(Med(name: "Ibuprofen", dosage: "250", daily: "2"))
+        medVC.meds.append(Med(name: "Viagra", dosage: "125", daily: "1"))
+        medVC.meds.append(Med(name: "Amicilin", dosage: "75", daily: "5"))
+        medVC.meds.append(Med(name: "Oxycodone", dosage: "10", daily: "2"))
+        
+        weekVC.weekDays.append("Monday")
+        weekVC.weekDays.append("Tuesday")
+        weekVC.weekDays.append("Wesnday")
+        weekVC.weekDays.append("Thrusday")
+        weekVC.weekDays.append("Friday")
+        weekVC.weekDays.append("Saturday")
+        weekVC.weekDays.append("Sunday")
+       
         
         return true
     }

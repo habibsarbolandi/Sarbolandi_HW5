@@ -5,7 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,7 +19,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="GFs-RY-WLI" kind="relationship" relationship="viewControllers" id="gKY-WX-wnr"/>
-                        <segue destination="kj0-Og-hwK" kind="relationship" relationship="viewControllers" id="QOC-ae-3mH"/>
+                        <segue destination="T3j-aH-198" kind="relationship" relationship="viewControllers" id="R8g-lJ-o00"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pi6-ib-D47" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -72,22 +71,6 @@
             </objects>
             <point key="canvasLocation" x="638" y="-356"/>
         </scene>
-        <!--Item-->
-        <scene sceneID="GFI-VM-i4d">
-            <objects>
-                <viewController id="kj0-Og-hwK" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ygC-fK-0tG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="KWh-5k-XDv"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="bGr-5l-iWh"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fXK-R8-sFR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-165" y="396"/>
-        </scene>
         <!--Meds-->
         <scene sceneID="s1f-fc-pOI">
             <objects>
@@ -106,6 +89,110 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4CR-a0-43c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-184" y="-355.32233883058473"/>
+        </scene>
+        <!--Weekly Schedule-->
+        <scene sceneID="Qo0-uF-pK8">
+            <objects>
+                <tableViewController id="WVx-O4-0ka" customClass="weekTVC" customModule="Sarbolandi_HW5" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4tg-Ij-Thy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="weekCell" textLabel="Cki-CG-yBd" style="IBUITableViewCellStyleDefault" id="U5R-Lq-hdW">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U5R-Lq-hdW" id="5Lb-zi-6AR">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cki-CG-yBd">
+                                            <rect key="frame" x="16" y="0.0" width="344" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WVx-O4-0ka" id="Blo-qZ-dp8"/>
+                            <outlet property="delegate" destination="WVx-O4-0ka" id="MlX-Lh-IAC"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Weekly Schedule" id="Iep-0i-fcw"/>
+                    <connections>
+                        <segue destination="8lI-cs-ehu" kind="show" id="Se6-C7-EzZ"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QOX-v8-sWv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="638" y="398"/>
+        </scene>
+        <!--TimeTVC-->
+        <scene sceneID="GyL-wy-Jy5">
+            <objects>
+                <tableViewController id="8lI-cs-ehu" customClass="timeTVC" customModule="Sarbolandi_HW5" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="TKA-zf-eyg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="timeCell" textLabel="Tgd-ge-kbQ" detailTextLabel="KSg-sw-dsQ" style="IBUITableViewCellStyleSubtitle" id="Y8O-La-CYn">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y8O-La-CYn" id="Q7i-JD-XaG">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tgd-ge-kbQ">
+                                            <rect key="frame" x="16" y="5" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KSg-sw-dsQ">
+                                            <rect key="frame" x="16" y="25.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8lI-cs-ehu" id="mAs-cf-y0u"/>
+                            <outlet property="delegate" destination="8lI-cs-ehu" id="RXT-Mc-40P"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J4S-O4-6rF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1449" y="398"/>
+        </scene>
+        <!--Weekly Scedule-->
+        <scene sceneID="MaE-qP-Tq9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="T3j-aH-198" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Weekly Scedule" id="oqC-g5-EdU"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7O4-84-V8l">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WVx-O4-0ka" kind="relationship" relationship="rootViewController" id="ERb-Rh-DYz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o6f-fn-NfN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-195.19999999999999" y="398.50074962518744"/>
         </scene>
     </scenes>
 </document>

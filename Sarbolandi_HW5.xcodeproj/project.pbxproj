@@ -14,6 +14,8 @@
 		83036BA81F9EFAD100089D7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83036BA71F9EFAD100089D7A /* Assets.xcassets */; };
 		83036BAB1F9EFAD100089D7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83036BA91F9EFAD100089D7A /* LaunchScreen.storyboard */; };
 		83036BB61F9EFAD200089D7A /* Sarbolandi_HW5UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83036BB51F9EFAD200089D7A /* Sarbolandi_HW5UITests.swift */; };
+		831CEE681FA0FCF800D96650 /* weekTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831CEE671FA0FCF800D96650 /* weekTVC.swift */; };
+		831CEE6C1FA109F100D96650 /* timeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831CEE6B1FA109F100D96650 /* timeTVC.swift */; };
 		83A3C6C11FA021B700B43537 /* medTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A3C6C01FA021B700B43537 /* medTVC.swift */; };
 		83A3C6C31FA0226700B43537 /* Med.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A3C6C21FA0226700B43537 /* Med.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +42,8 @@
 		83036BB11F9EFAD200089D7A /* Sarbolandi_HW5UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Sarbolandi_HW5UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83036BB51F9EFAD200089D7A /* Sarbolandi_HW5UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sarbolandi_HW5UITests.swift; sourceTree = "<group>"; };
 		83036BB71F9EFAD200089D7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		831CEE671FA0FCF800D96650 /* weekTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weekTVC.swift; sourceTree = "<group>"; };
+		831CEE6B1FA109F100D96650 /* timeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timeTVC.swift; sourceTree = "<group>"; };
 		83A3C6C01FA021B700B43537 /* medTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = medTVC.swift; sourceTree = "<group>"; };
 		83A3C6C21FA0226700B43537 /* Med.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Med.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +90,8 @@
 				83036B9D1F9EFAD100089D7A /* AppDelegate.swift */,
 				83036B9F1F9EFAD100089D7A /* ViewController.swift */,
 				83036BA11F9EFAD100089D7A /* Main.storyboard */,
+				831CEE671FA0FCF800D96650 /* weekTVC.swift */,
+				831CEE6B1FA109F100D96650 /* timeTVC.swift */,
 				83A3C6C21FA0226700B43537 /* Med.swift */,
 				83A3C6C01FA021B700B43537 /* medTVC.swift */,
 				83036BA71F9EFAD100089D7A /* Assets.xcassets */,
@@ -211,8 +217,10 @@
 				83A3C6C31FA0226700B43537 /* Med.swift in Sources */,
 				83036BA01F9EFAD100089D7A /* ViewController.swift in Sources */,
 				83036B9E1F9EFAD100089D7A /* AppDelegate.swift in Sources */,
+				831CEE6C1FA109F100D96650 /* timeTVC.swift in Sources */,
 				83A3C6C11FA021B700B43537 /* medTVC.swift in Sources */,
 				83036BA61F9EFAD100089D7A /* Sarbolandi_HW5.xcdatamodeld in Sources */,
+				831CEE681FA0FCF800D96650 /* weekTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
