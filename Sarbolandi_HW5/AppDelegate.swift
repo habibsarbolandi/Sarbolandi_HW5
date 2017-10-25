@@ -28,14 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         medVC.meds.append(Med(name: "Amicilin", dosage: "75", daily: "5"))
         medVC.meds.append(Med(name: "Oxycodone", dosage: "10", daily: "2"))
         
-        weekVC.weekDays.append("Monday")
-        weekVC.weekDays.append("Tuesday")
-        weekVC.weekDays.append("Wesnday")
-        weekVC.weekDays.append("Thrusday")
-        weekVC.weekDays.append("Friday")
-        weekVC.weekDays.append("Saturday")
-        weekVC.weekDays.append("Sunday")
-       
+        let hourInt = Array(1...12)
+        //let hourString = hourInt as! String
+        
+        weekVC.weekDays = ["Monday": ["1"],"Tuesday": ["1", "2"],"Wednesday": ["2", "4"],"Thursday": ["1", "5"], "Friday": ["4", "5"],"Saturday": ["1", "6"],"Sunday": ["1"]]
         
         return true
     }

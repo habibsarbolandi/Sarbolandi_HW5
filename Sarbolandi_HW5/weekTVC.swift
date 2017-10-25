@@ -10,7 +10,9 @@ import UIKit
 
 class weekTVC: UITableViewController {
     
-    var weekDays = [String]()
+    var weekDays: [String: Array<String>] = [:]
+    var selectedRow = ""
+    var selectedDay = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,10 +45,37 @@ class weekTVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "weekCell", for: indexPath)
         
-        let day = weekDays[indexPath.row]
-        cell.textLabel?.text = day
+        let day = Array(weekDays.keys)
+        cell.textLabel?.text = day[indexPath.row]
+        
       
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //TODO: react to user selecting row
+        //I want the detail view controller to update based on the row that I selected
+        
+       // print("In didSelectRowAt")
+        //TODO: get cell information
+        
+        let day = Array(weekDays.keys)
+        selectedRow = day[indexPath.row]
+        
+        let timesOfDays = Array(weekDays.values)
+        selectedDay = timesOfDays[indexPath.row]
+        
+        //call segue manually
+        performSegue(withIdentifier: "cellSelected", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        
+        
+        let destVC = segue.destination as! timeTVC
+        destVC.times = selectedDay
     }
     
     /*

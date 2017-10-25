@@ -89,11 +89,11 @@
 			children = (
 				83036B9D1F9EFAD100089D7A /* AppDelegate.swift */,
 				83036B9F1F9EFAD100089D7A /* ViewController.swift */,
+				83A3C6C21FA0226700B43537 /* Med.swift */,
+				83A3C6C01FA021B700B43537 /* medTVC.swift */,
 				83036BA11F9EFAD100089D7A /* Main.storyboard */,
 				831CEE671FA0FCF800D96650 /* weekTVC.swift */,
 				831CEE6B1FA109F100D96650 /* timeTVC.swift */,
-				83A3C6C21FA0226700B43537 /* Med.swift */,
-				83A3C6C01FA021B700B43537 /* medTVC.swift */,
 				83036BA71F9EFAD100089D7A /* Assets.xcassets */,
 				83036BA91F9EFAD100089D7A /* LaunchScreen.storyboard */,
 				83036BAC1F9EFAD100089D7A /* Info.plist */,

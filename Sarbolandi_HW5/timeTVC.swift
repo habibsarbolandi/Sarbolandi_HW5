@@ -10,7 +10,10 @@ import UIKit
 
 class timeTVC: UITableViewController {
     
-    var medDictionary: [String:Array<Med>] = [:]
+    var times = [String]()
+    
+   // let medDictionary: [String:Array<Med>] = [:]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,15 +39,15 @@ class timeTVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 2
+        return times.count
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "timeCell", for: indexPath)
 
-        let keywords = Array(medDictionary.keys)
-        cell.textLabel?.text = keywords[indexPath.row]
+        //let keywords = Array(medDictionary.keys)
+        cell.textLabel?.text = times[indexPath.row]
 
         return cell
     }
