@@ -8,14 +8,19 @@
 
 import UIKit
 
-protocol CellSelectedDelegate {
-    func read(med: Med)
-}
+//protocol CellSelectedDelegate {
+//    func read(med: Med)
+//}
 
 class medTVC: UITableViewController {
 
+    @IBAction func addButton(_ sender: Any) {
+    print("adding a med")
+        
+    }
+    
     var meds = [Med]()
-    let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addMed))
+    //var addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addMed))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,20 +30,13 @@ class medTVC: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         self.navigationItem.leftBarButtonItem = self.editButtonItem
-        self.navigationItem.rightBarButtonItem = self.addButton
+        //self.navigationItem.rightBarButtonItem = addButton
     }
-
-    @objc func addMed() {
-        //let alertName = UIAlertController(title: "Medication", message: "Type name of med", preferredStyle: .alert)
-        //let confirmName = UIAlertAction(title: "Confirm", style: UIAlertActionStyle.default, handler: ({
-          //  (_) in
-            
-        //}))
-        print("adding a med")
-       // let alertDosage = UIAlertController(title: "Dosage", message: "Type the dosage of med (ie 125 or 275)", preferredStyle: .alert)
-       // let alertDaily = UIAlertController(title: "Daily", message: "Number of times taken per day (ie 1 or 5)", preferredStyle: .alert)
+    
+    //@objc func addMed() {
+   //     print("adding a med")
         
-    }
+   // }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -58,10 +56,8 @@ class medTVC: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //TODO: react to user selecting row
-        //I want the detail view controller to update based on the row that I selected
         
-        let selectedMed = meds[indexPath.row]
+        //let selectedMed = meds[indexPath.row]
         
     }
 
@@ -88,7 +84,7 @@ class medTVC: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            print("deleting med")
+            //print("deleting med")
             meds.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {

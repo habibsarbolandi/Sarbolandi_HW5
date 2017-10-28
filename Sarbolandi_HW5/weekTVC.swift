@@ -45,7 +45,8 @@ class weekTVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "weekCell", for: indexPath)
         
-        let day = Array(weekDays.keys)
+        
+        let day = Array(weekDays.keys).sorted()
         cell.textLabel?.text = day[indexPath.row]
         
       
@@ -58,7 +59,6 @@ class weekTVC: UITableViewController {
         
        // print("In didSelectRowAt")
         //TODO: get cell information
-        
         let day = Array(weekDays.keys)
         selectedRow = day[indexPath.row]
         

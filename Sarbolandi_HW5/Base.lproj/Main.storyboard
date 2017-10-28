@@ -65,7 +65,13 @@
                             <outlet property="delegate" destination="TG0-fc-11n" id="UUO-tW-Lno"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Meds" id="vyW-z0-Wnu"/>
+                    <navigationItem key="navigationItem" title="Meds" id="vyW-z0-Wnu">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="A61-ES-98z">
+                            <connections>
+                                <action selector="addButton:" destination="TG0-fc-11n" id="o1G-1V-Rdr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1jf-u5-CAQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -148,7 +154,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="V9c-Ty-AWL">
-                                            <rect key="frame" x="16" y="0.0" width="344" height="43"/>
+                                            <rect key="frame" x="16" y="0.0" width="344" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
