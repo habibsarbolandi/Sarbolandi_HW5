@@ -16,7 +16,12 @@ class medTVC: UITableViewController {
 
     @IBAction func addButton(_ sender: Any) {
     print("adding a med")
-        
+        let alertName = UIAlertController(title: "Medication", message: "Type name of med", preferredStyle: .alert)
+        let confirmName = UIAlertAction(title: "Confirm", style: UIAlertActionStyle.default, handler: ({
+            (_) in
+        }))
+        alertName.addAction(confirmName)
+        self.present(alertName, animated: true, completion: nil)
     }
     
     var meds = [Med]()
